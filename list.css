@@ -1,0 +1,120 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+
+.container{
+    
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-around;
+   
+    
+    
+}
+
+.back{
+    display:flex;
+    justify-content: space-around;
+    background-image:linear-gradient(to top right,#FDA231, #FDCA31);
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    box-shadow:1px 1px 1px 1px rgba(139, 139, 139, 0.3);
+    border-radius: 2px;
+}
+
+.list{
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border-radius: 3px;
+}
+.calender{
+    text-align: center;
+    margin-top: 20px;
+    color:#497081;
+}
+.calender .day{
+    display:block;
+    font-size: 1.4rem;
+}
+.date{
+    font-size:10px;
+    padding-top:30px;
+}
+
+    
+
+.list{
+    
+    padding-top:10px;
+    
+}
+ul {
+    list-style-type: none; 
+    padding: 0;
+    height: 90px;
+    
+}
+li{
+   
+    padding:20px ;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    height:20px;
+
+}
+label{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top:5px;
+    height:20px;
+    color: rgb(73, 112, 129); 
+    
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.custom-checkbox {
+    display:inline-block;
+    width:15px;
+    height: 15px;
+    border: 2px solid rgb(73, 112, 129);
+    border-radius:50% ; 
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(73, 112, 129); 
+    border-width: 0 2px 2px 0; 
+    transform: translate(-50%, -50%) rotate(45deg); 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+    transition:border-color 0.5s ease;
+    border-color: rgb(176, 196, 205);
+}
+input[type="checkbox"]:checked + .custom-checkbox {
+    border-color: white;
+}
